@@ -6,7 +6,6 @@ const rateLimit = require('express-rate-limit');
 const compression = require('compression');
 
 dotenv.config({ path: `${__dirname}/.env` });
-// require('./redisConnection');
 require('./dbConnection');
 
 const globalErrorHandler = require('./controllers/errorController');

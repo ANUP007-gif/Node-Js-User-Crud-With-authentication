@@ -1,6 +1,5 @@
 const express = require('express');
 const { validator, validateResponse } = require('../utility/validator');
-// const authController = require('../controllers/authController');
 const userController = require('../controllers/userController');
 
 const middleware = require('../controllers/middleware')

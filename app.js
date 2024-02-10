@@ -33,24 +33,10 @@ app.use(morgan('dev'));
 
 app.set('trust proxy', true);
 
-// Limit requests from same IP
-// const limiter = rateLimit({
-//   max: 100,
-//   windowMs: 60 * 60 * 1000,
-//   message: 'Too many requests from this IP. Please try again in an hour!',
-// });
-
-// if (process.env.SERVER_URL !== 'https://raaonline-backend.onrender.com') {
-//   app.use('/api', limiter);
-// }
-
-// Test API
 app.get('/', (req, res) => {
   res.status(200).json({ status: 'success', message: 'Raa online api is working.' });
 });
 
-// API Routes
-// app.use('/api/appsettings', appSettingsRouter);
 app.use('/api/users', userRouter);
 
 
